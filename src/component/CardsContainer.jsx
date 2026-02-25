@@ -1,13 +1,12 @@
 import Card from "./Card"
-export default function CardsContainer({getData,items}){
+export default function CardsContainer({items}){
     return(
         <>
-            <button onClick = {getData} className="bg-green-400 text-2xl px-4 py-2 ">Get Data</button>
-
-            <div className="flex flex-wrap gap-4">
+            
+            <div className="flex flex-wrap gap-6 max-w-7xl justify-center p-4">
                 {items.map((item, idx) => (
                 <div key = {idx}>
-                    <Card image = {item.image} para = {item.description} title = {item.title}/>
+                    <Card image = {item.download_url} author = {item.author} url = {item.url}/>
                 </div> 
                 ))}
             </div>
