@@ -32,7 +32,7 @@ function App() {
   }
 
   return (
-    <div className='flex flex-col items-center min-h-screen'>
+    <div className='flex flex-col items-center h-screen w-screen min-h-screen'>
       {loading ? (
         <p className='text-xl flex items-center min-h-screen'>Loading...</p>
       ): (
@@ -42,9 +42,9 @@ function App() {
       )}
       {!loading?(
         <div className='flex items-center'>
-          <button onClick= {prevPage} className='bg-amber-400 px-4 py-2 m-4'>Prev</button>
+          <button onClick= {prevPage} className= {page === 1 ? 'bg-amber-100 text-black px-4 py-2 m-4' : 'bg-amber-400 px-4 py-2 m-4 text-black' }>Prev</button>
           <p>{page}</p>
-          <button onClick={nextPage} className='bg-amber-400 px-4 py-2 m-4'>Next</button>
+          <button onClick={nextPage} className='bg-amber-400 px-4 py-2 m-4 text-black'>Next</button>
       </div>
       ) : (<div></div>)}
       
